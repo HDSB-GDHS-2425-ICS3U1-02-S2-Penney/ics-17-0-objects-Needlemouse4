@@ -9,7 +9,6 @@ function init() {
   ctx = canvas.getContext('2d');
   // Start the first frame request to begin the game loop
   window.requestAnimationFrame(gameLoop);
-
 }
 
 /**** OBJECT CREATION FUNCTIONS ****/
@@ -28,13 +27,13 @@ const objs = [];
 let currentcircle = 0;
 
 function createCircle() {
-
   objs[currentcircle] = new circle(randomInteger(0, 1500), randomInteger(0, 1000), randomColor(), randomInteger(0, 50));
 
   ctx.beginPath();
   ctx.arc(objs[currentcircle].x, objs[currentcircle].y, objs[currentcircle].size, 0, Math.PI * 2);
   ctx.fillStyle = objs[currentcircle].color;
   ctx.fill();
+  console.log(objs[currentcircle].color);
 }
 
 // Write the randomInteger function here. 
