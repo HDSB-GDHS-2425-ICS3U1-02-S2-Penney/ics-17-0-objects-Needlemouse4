@@ -21,7 +21,6 @@ function circle(x, y, color, size) {
   this.size = size; 
 }
 
-
 // Write the createCircle function here. 
 const objs = [];
 let currentcircle = 0;
